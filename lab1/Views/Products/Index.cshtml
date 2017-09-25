@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<lab1.Models.Detail>
+
+<h2>Look at all these Products</h2>
+
+<ul>
+    @foreach(var d in Model)
+    {
+        <li>@Html.ActionLink(d.Name, "Details","Products", new { details = d.Name }, null)</li>
+    }
+</ul>
